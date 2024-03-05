@@ -8,16 +8,48 @@
 </head>
 <body>
     <header class="custom-header">
-        <h1>Todo List</h1>
+        <h1>Todo List WebApp</h1>
     </header>
 
-    <div class="container">
-        <aside class="sidebar">
-            <h2>Projects</h2>
-            <button id="add-project">Add Project</button>
-        </aside>
+    <div class="content">
+        <div class="form-heading">
+            <h1>Add New ToDo</h1>
+        </div>
+        <div class="todos-heading">
+            <h1>Current Todos</h1>
+        </div>
+        <div class="form">
+            <button class="add-todo-button">Add New Todo</button>
+            <div id="add-todo-form" style = "display:none">
+            <form id="add-todo">
+                <label for="Project">Project</label>
+                <select name="Project" id="Project">
+                    <option value="DefaultProject">Default Project</option>
+                    <option value="Create-New-Project">Create New Project</option>
+                </select>
+                <label for="Title" id ="Title" name = "Title">Title</label>
+                <input type="text" name="Title" id="Title">
+                <label for="Description" id ="Description" name = "Description">Description</label>
+                <input type="text" name="Description" id="Description">
+                <label for="DueDate">Due Date:</label>
+                <input type="DueDate" name="DueDate" id="date">
+                <label for="Priority">Priority</label>
+                <select name="Priority" id="Priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <label for="Checklist">Checklist Items Added(if any):</label>
+                <ul class="todo-ul"></ul>
+            </form>
+            <input type="text" id="add-to-checklist" name="add-to-checklist" placeholder="Type Checklist Items here">
+            <button class="add-to-checklist">Add Item To Checklist</button>
+            <br>
+            <button type="submit" class="submit-button">Submit Todo </button>
+            <button type="reset" class="reset-button">Reset Form</button>
+            </div>
+        </div>
     </div>
-
     <script src="main.js"></script>
 </body>
 </html>

@@ -1,0 +1,88 @@
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.custom-header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Content Styles */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Form Heading Styles */
+.form-heading {
+    margin-bottom: 20px;
+}
+
+/* Todos Heading Styles */
+.todos-heading {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Form Inputs Styles */
+.form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form input[type="text"],
+.form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* Add Todo Button Styles */
+.add-todo-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-todo-button:hover {
+    background-color: #45a049;
+}
+
+/* Add Checklist Item Styles */
+.add-to-checklist {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+/* Submit Button Styles */
+.submit-button,
+.reset-button {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-button:hover,
+.reset-button:hover {
+    background-color: #005f6b;
+}
