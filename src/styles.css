@@ -1,88 +1,109 @@
-/* Body Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Reset default margin and padding */
+html, body {
     margin: 0;
     padding: 0;
 }
 
-/* Header Styles */
-.custom-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+/* Set a vibrant background color */
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
 }
 
-/* Content Styles */
+/* Overall container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main content section */
 .content {
-    max-width: 800px;
-    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
     padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    width: 80%;
+    max-width: 1200px;
 }
 
-/* Form Heading Styles */
-.form-heading {
+/* Headings */
+h1 {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-/* Todos Heading Styles */
-.todos-heading {
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-/* Form Styles */
+/* Form styles */
 .form {
-    border: 1px solid #ccc;
-    padding: 20px;
-    background-color: #f9f9f9;
-}
-
-/* Form Inputs Styles */
-.form label {
-    display: block;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
 }
 
 .form input[type="text"],
-.form select {
+.form textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     box-sizing: border-box;
 }
 
-/* Add Todo Button Styles */
-.add-todo-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
+.form button {
+    width: 100%;
+    padding: 10px;
     border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.add-todo-button:hover {
-    background-color: #45a049;
+/* Todo list */
+.todo-list {
+    list-style: none;
+    padding: 0;
 }
 
-/* Add Checklist Item Styles */
-.add-to-checklist {
-    margin-top: 10px;
-    padding: 5px 10px;
+.todo-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-/* Submit Button Styles */
-.submit-button,
-.reset-button {
-    background-color: #008CBA;
-    color: white;
+.todo-item.done {
+    text-decoration: line-through;
+}
+
+/* Buttons */
+.button {
     padding: 10px 20px;
+    margin-right: 10px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
-.submit-button:hover,
-.reset-button:hover {
-    background-color: #005f6b;
+.button.primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.button.secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.button.danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #0056b3;
 }

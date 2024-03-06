@@ -1,3 +1,4 @@
+import { mode } from "../webpack.config";
 import { blankProjectLoad } from "./blank-project";
 
 
@@ -25,6 +26,8 @@ export function displayDefaultProject(){
     projectsInfoDiv.textContent = blankProjectLoad().projectTitle;
     contentDiv.appendChild(projectsInfoDiv);
 }
+
+
 
 export function displayTheForm(){
    document.getElementById("add-todo-form").style.display = "";
@@ -75,4 +78,44 @@ export function clearForm(){
         nodeListChecklist.remove();
     }
     document.getElementById("add-todo").reset();
+}
+
+
+export function displayToDo(){
+    //check and clear the current display DOM 
+    const removeDivs = document.querySelectorAll(".card");
+    console.log("Show the node count of current card divs....", removeDivs);
+    for(let i=0;i<removeDivs.length;i++){
+        removeDivs[i].remove();
+    }
+
+    //create display card for the display DOM
+    console.log("display to screen");
+    const projects = document.querySelector(".projects");
+    const card = document.createElement('div');
+    card.classList.add("card");
+    projects.appendChild(card);
+
+
+    //gather data from local backend storage
+
+    let Title = localStorage.getItem("Title");
+    let Description = localStorage.getItem("Description");
+    let DueDate = localStorage.getItem("DueDate");
+    let Priority = localStorage.getItem("Priority");
+    let Checklist = localStorage.getItem("Checklist");
+
+    //place data in local temp array and loop over key value pairs and display to DOM
+
+    let _displayArray = {Title, Description, DueDate, Priority, Checklist};
+
+    console.log(_displayArray);
+
+    for(let key in _displayArray){
+        console.log(`${key}: ${_displayArray[key]}`);
+        const para = document.createElement("p");
+        para.textContent = (`${key}: ${_displayArray[key]}`);
+        card.appendChild(para);
+    }
+
 }

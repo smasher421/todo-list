@@ -3,6 +3,8 @@ import { createToDo } from './createTodo';
 import { blankProjectLoad } from './blank-project';
 import { displayDefaultProject, displayTheForm, addItemToChecklist, clearForm } from './initial-dom-manip';
 import './styles.css';
+
+
 //call DOM manipulation on first bootup
 blankProjectLoad();
 
